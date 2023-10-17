@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://77a03racyvx8"]
+
+[ext_resource type="Texture2D" uid="uid://sqfxak56o6tl" path="res://super-bazza-bogan/block.png" id="1_sdsm6"]
+[ext_resource type="Texture2D" uid="uid://cqw3fgtowcy4r" path="res://super-bazza-bogan/brick.png" id="2_tw83u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8wjo"]
+texture = ExtResource("1_sdsm6")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kiiq"]
+texture = ExtResource("2_tw83u")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="TileSet" id="TileSet_08i57"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_n8wjo")
+sources/1 = SubResource("TileSetAtlasSource_0kiiq")
+
+[node name="world" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_08i57")
+format = 2
