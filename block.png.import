@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqw3fgtowcy4r"
-path="res://.godot/imported/brick.png-5f661461b986e8351e9cca4ed0f4c738.ctex"
+uid="uid://sqfxak56o6tl"
+path="res://.godot/imported/block.png-b7fed0a755ada244f74f9622a987e81f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://super-bazza-bogan/brick.png"
-dest_files=["res://.godot/imported/brick.png-5f661461b986e8351e9cca4ed0f4c738.ctex"]
+source_file="res://block.png"
+dest_files=["res://.godot/imported/block.png-b7fed0a755ada244f74f9622a987e81f.ctex"]
 
 [params]
 
