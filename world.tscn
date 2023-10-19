@@ -32,3 +32,11 @@ layer_0/tile_data = PackedInt32Array(2162688, 1, 0, 2228224, 1, 0, 2293760, 1, 0
 
 [node name="player" parent="TileMap" instance=ExtResource("3_5ewco")]
 position = Vector2(42, 497)
+
+[node name="Camera2D" type="Camera2D" parent="TileMap/player"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_bottom = 600
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
