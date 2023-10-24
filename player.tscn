@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5x2j1fdg3rop"]
+[gd_scene load_steps=12 format=3 uid="uid://5x2j1fdg3rop"]
 
 [ext_resource type="Texture2D" uid="uid://c5novyy6xnwvg" path="res://bazzabogan.png" id="1_1hb45"]
 [ext_resource type="Script" path="res://player.gd" id="1_lxet0"]
@@ -59,14 +59,35 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4x82c"]
 height = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63gy6"]
+size = Vector2(24, 28.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttj7o"]
+size = Vector2(26, 3)
+
 [node name="player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_lxet0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_pf7se")
-animation = &"idle"
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_4x82c")
+
+[node name="hibox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hibox"]
+position = Vector2(0, -17.75)
+shape = SubResource("RectangleShape2D_63gy6")
+
+[node name="feet" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="feet"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_ttj7o")
+
+[connection signal="body_entered" from="hibox" to="." method="_on_hibox_body_entered"]
