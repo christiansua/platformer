@@ -68,10 +68,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwp4j"]
-size = Vector2(16, 12)
+size = Vector2(16, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r775b"]
-size = Vector2(14, 3)
+size = Vector2(16, 1.5)
 
 [node name="toad" type="CharacterBody2D"]
 position = Vector2(-2, 0)
@@ -84,14 +84,14 @@ animation = &"hop"
 frame_progress = 0.0223413
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_rwp4j")
 
 [node name="hitbox" type="Area2D" parent="."]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -12)
+position = Vector2(0, -13.75)
 shape = SubResource("RectangleShape2D_r775b")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
