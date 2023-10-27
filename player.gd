@@ -86,3 +86,8 @@ func move_player_up_and_down():
 func on_DeathTimer_timeout():
 	get_tree().reload_current_scene()
 	
+
+
+func _on_interaction_body_entered(body):
+	if body.is_in_group("Player"):
+		body.die()
