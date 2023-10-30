@@ -6,3 +6,5 @@ res://coin.tscn
 res://coin.gd
 res://coin_gui.gd
 res://coin_gui.tscn
+res://player.gd
+res://underworld.tscn
