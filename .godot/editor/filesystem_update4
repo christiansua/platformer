@@ -1,8 +1,8 @@
-res://big_toad.tscn
 res://world.tscn
 res://player.tscn
 res://toad.tscn
-res://coin.gd
+res://big_toad.tscn
 res://coin.tscn
-res://player.gd
-res://Area2D.gd
+res://coin.gd
+res://coin_gui.gd
+res://coin_gui.tscn
