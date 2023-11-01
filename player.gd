@@ -3,8 +3,8 @@ extends CharacterBody2D
 var is_dying = false
 var is_jumping = false
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -350.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -950.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -75,8 +75,7 @@ func die():
 		print("reloading scene")
 		get_tree().reload_current_scene()
 	else:
-		queue_free()
-		#get_tree().change_scene_to_file("res://gameover.tscn)	
+		get_tree().change_scene_to_file("res://gameover.tscn")
 	
 	
 func move_player_up_and_down():
