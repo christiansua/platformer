@@ -12,3 +12,5 @@ res://underworldtoad.tscn
 res://player.gd
 res://gameover.gd
 res://gameover.tscn
+res://questionblock.gd
+res://questionblock.tscn
