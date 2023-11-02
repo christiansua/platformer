@@ -159,5 +159,8 @@ position = Vector2(916.5, 336)
 [node name="questionblock" parent="." instance=ExtResource("10_o54il")]
 position = Vector2(69, 449)
 
+[node name="questionblock2" parent="." instance=ExtResource("10_o54il")]
+position = Vector2(530, 450)
+
 [connection signal="body_entered" from="interaction" to="TileMap/player" method="_on_interaction_body_entered"]
 [connection signal="body_entered" from="transition" to="TileMap/player" method="_on_transition_body_entered"]
