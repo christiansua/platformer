@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://77a03racyvx8"]
+[gd_scene load_steps=17 format=3 uid="uid://77a03racyvx8"]
 
 [ext_resource type="Texture2D" uid="uid://sqfxak56o6tl" path="res://block.png" id="1_3tomy"]
 [ext_resource type="Texture2D" uid="uid://cqw3fgtowcy4r" path="res://brick.png" id="2_yxmia"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c2uows5io1p8n" path="res://coin.tscn" id="6_drsmv"]
 [ext_resource type="Script" path="res://Area2D.gd" id="7_nyx4p"]
 [ext_resource type="PackedScene" uid="uid://cf3iaa1efovrn" path="res://coin_gui.tscn" id="8_w6utk"]
+[ext_resource type="PackedScene" uid="uid://b6mg0lik45yh5" path="res://questionblock.tscn" id="10_o54il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8wjo"]
 texture = ExtResource("1_3tomy")
@@ -154,6 +155,9 @@ position = Vector2(404.5, 357)
 
 [node name="coin16" parent="." instance=ExtResource("6_drsmv")]
 position = Vector2(916.5, 336)
+
+[node name="questionblock" parent="." instance=ExtResource("10_o54il")]
+position = Vector2(69, 449)
 
 [connection signal="body_entered" from="interaction" to="TileMap/player" method="_on_interaction_body_entered"]
 [connection signal="body_entered" from="transition" to="TileMap/player" method="_on_transition_body_entered"]

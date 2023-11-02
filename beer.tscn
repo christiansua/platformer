@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuhrc7svks1ct"]
+
+[ext_resource type="Script" path="res://beer.gd" id="1_ggrp6"]
+[ext_resource type="Texture2D" uid="uid://pi5vt48wnwpd" path="res://beerbottle.png" id="2_4rhsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x55xm"]
+size = Vector2(9, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgu7b"]
+size = Vector2(13, 29)
+
+[node name="beer" type="CharacterBody2D"]
+script = ExtResource("1_ggrp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_4rhsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -11.5)
+shape = SubResource("RectangleShape2D_x55xm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -15.5)
+shape = SubResource("RectangleShape2D_cgu7b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
