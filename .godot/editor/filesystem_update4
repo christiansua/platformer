@@ -15,3 +15,5 @@ res://start.tscn
 res://gameover.tscn
 res://beer.tscn
 res://player.gd
+res://thong_power_up.tscn
+res://thong_power_up.gd
