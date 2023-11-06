@@ -16,7 +16,18 @@ func _on_body_entered(body):
 func bump_block():
 	state = State.BUMPED
 	$Sprite2D.frame = 1 # switch to the second frame to indicate "used" state
-	Global.spawn_beer_bottle(self.global_position + Vector2(0, -20))
+	
+	match Global.current_state:
+		Global.PlayerState.SMALL:
+			Global.spawn_beer_bottle(self.global_position + Vector2(0, -20))
+		Global.PlayerState.BIG, Global.PlayerState.THONG:
+			Global.spawn_thong_power_up(self.global_position + Vector2(0, -20))
+	
+	
+	
+	
+
+	
 	bump_upwards()
 	var timer = get_tree().create_timer(0.2)
 	await timer.timeout
@@ -24,7 +35,7 @@ func bump_block():
 	
 	# moves block upwards
 func bump_upwards():
-		position.y -=10
+	position.y -=10
 
 #returns block to its original positoin
 func return_to_original_position():

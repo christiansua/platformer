@@ -20,5 +20,5 @@ shape = SubResource("CapsuleShape2D_vuk41")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="interaction"]
 stream = ExtResource("3_ejfa0")
 
-[connection signal="body_entered" from="interaction" to="." method="_on_interaction_body_entered"]
 [connection signal="body_entered" from="interaction" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_entered" from="interaction" to="." method="_on_interaction_body_entered"]

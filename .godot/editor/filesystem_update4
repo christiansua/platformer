@@ -1,9 +1,5 @@
-res://questionblock.tscn
-res://start.gd
-res://questionblock.gd
-res://beer.gd
-res://global.gd
 res://world.tscn
+res://start.gd
 res://player.tscn
 res://toad.tscn
 res://big_toad.tscn
@@ -12,8 +8,10 @@ res://coin.tscn
 res://coin_gui.tscn
 res://underworld.tscn
 res://start.tscn
-res://gameover.tscn
-res://beer.tscn
-res://player.gd
 res://thong_power_up.tscn
+res://thong.tscn
 res://thong_power_up.gd
+res://player.gd
+res://questionblock.gd
+res://beer.gd
+res://global.gd
