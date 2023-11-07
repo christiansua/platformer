@@ -1,6 +1,9 @@
-Timer
 CollisionShape2D
 Area2D
+Camera2D
+TileMap
+ColorRect
+Timer
 AnimatedSprite2D
 Sprite2D
 CharacterBody2D
@@ -8,8 +11,5 @@ StaticBody2D
 Button
 CanvasLayer
 RayCast2D
-Camera2D
-ColorRect
-TileMap
 Label
 AudioStreamPlayer2D

@@ -47,28 +47,27 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jw53o"]
-radius = 4.0
-height = 16.0
+radius = 5.0
+height = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2m4eo"]
-radius = 9.0
 
 [node name="thong" type="Area2D"]
 script = ExtResource("1_5jrcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
-scale = Vector2(0.5, 0.46875)
+position = Vector2(0.5, -9.25)
+scale = Vector2(0.65625, 0.609375)
 sprite_frames = SubResource("SpriteFrames_kipwp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_jw53o")
 
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_2m4eo")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
