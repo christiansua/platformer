@@ -31,4 +31,5 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group("Player"):
 		is_alive = false
 		#deletes sprite 
+		body.enemy_death()
 		queue_free()

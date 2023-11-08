@@ -1,6 +1,5 @@
-res://start.gd
-res://player.gd
 res://thong_power_up.tscn
+res://start.gd
 res://world.tscn
 res://player.tscn
 res://toad.tscn
@@ -12,3 +11,9 @@ res://underworld.tscn
 res://start.tscn
 res://thong.tscn
 res://void.tscn
+res://player.gd
+res://toad.gd
+res://big_toad.gd
+res://underworldtoad.gd
+res://thong.gd
+res://beer.tscn

@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds6km0vas77an"]
+[gd_scene load_steps=12 format=3 uid="uid://ds6km0vas77an"]
 
 [ext_resource type="Script" path="res://thong.gd" id="1_5jrcp"]
 [ext_resource type="Texture2D" uid="uid://uo75bngdet4j" path="res://thong.png" id="1_7r43u"]
+[ext_resource type="AudioStream" uid="uid://bl1jbmdhsyhuk" path="res://EXPLOSION Bang 04.wav" id="3_r3ou4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6wu4"]
 atlas = ExtResource("1_7r43u")
@@ -53,6 +54,7 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_2m4eo"]
 
 [node name="thong" type="Area2D"]
+position = Vector2(0, 19)
 script = ExtResource("1_5jrcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -65,6 +67,9 @@ position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_jw53o")
 
 [node name="hitbox" type="Area2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="hitbox"]
+stream = ExtResource("3_r3ou4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, -9)

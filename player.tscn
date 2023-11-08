@@ -1,8 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://5x2j1fdg3rop"]
+[gd_scene load_steps=25 format=3 uid="uid://5x2j1fdg3rop"]
 
 [ext_resource type="Texture2D" uid="uid://c5novyy6xnwvg" path="res://bazzabogan.png" id="1_1hb45"]
 [ext_resource type="Script" path="res://player.gd" id="1_lxet0"]
 [ext_resource type="Texture2D" uid="uid://rdx3d5002v5x" path="res://bazzalargethongs.png" id="3_ak5fu"]
+[ext_resource type="AudioStream" uid="uid://bc104od603d8o" path="res://SPLAT Crush 01.wav" id="4_o4lr7"]
+[ext_resource type="AudioStream" uid="uid://bl1jbmdhsyhuk" path="res://EXPLOSION Bang 04.wav" id="5_h7qcb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6gbfc"]
 atlas = ExtResource("1_1hb45")
@@ -116,7 +118,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"thong_fire",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -124,7 +126,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"thong_idle",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -135,7 +137,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"thong_jump",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,7 +151,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"thong_run",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4x82c"]
@@ -189,5 +191,11 @@ shape = SubResource("RectangleShape2D_ttj7o")
 [node name="death_timer" type="Timer" parent="."]
 
 [node name="ThongFireTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_o4lr7")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_h7qcb")
 
 [connection signal="body_entered" from="hibox" to="." method="_on_hibox_body_entered"]

@@ -8,7 +8,7 @@ var is_big = false
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -390.0
 var player_direction = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -96,6 +96,8 @@ func die():
 		
 	is_dying = true
 	animated_sprite_2d.play("die")
+
+	$AudioStreamPlayer2D.play()
 	await move_player_up_and_down()
 	Global.player_lives -= 1
 	if Global.player_lives > 0:
@@ -137,7 +139,7 @@ func fire_thong():
 	is_firing_thong = true
 	print("firing thong")
 	var thong = load("res://thong.tscn").instantiate()
-	thong.global_position = Vector2(self.global_position.x, self.global_position.y - 15)
+	thong.global_position = Vector2(self.global_position.x, self.global_position.y - 5)
 	
 	thong.set("velocity", Vector2(500 * player_direction, 0))
 	print("Thong fired")
@@ -156,3 +158,5 @@ func _on_interaction_body_entered(body):
 func _on_transition_body_entered(body):
 	if body.is_in_group("Player"):
 		get_tree().change_scene_to_file("res://underworld.tscn")
+func enemy_death():
+	$AudioStreamPlayer2D2.play()
